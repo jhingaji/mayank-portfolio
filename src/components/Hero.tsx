@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Download, Github, Mail, MapPin, Sparkles } from "lucide-react";
 
 const floatingChips = [
   { label: "React", x: "8%", y: "20%", delay: 0 },
@@ -12,7 +12,10 @@ const floatingChips = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden pt-32 pb-20">
+    <section
+      id="top"
+      className="relative min-h-screen overflow-hidden pt-32 pb-20"
+    >
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
 
       {/* Floating tech chips */}
@@ -25,7 +28,12 @@ export function Hero() {
             transition={{
               opacity: { duration: 0.8, delay: c.delay },
               scale: { duration: 0.8, delay: c.delay },
-              y: { duration: 5 + Math.random() * 2, repeat: Infinity, ease: "easeInOut", delay: c.delay },
+              y: {
+                duration: 5 + Math.random() * 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: c.delay,
+              },
             }}
             style={{ left: c.x, top: c.y }}
             className="absolute"
@@ -78,8 +86,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg"
         >
-          Software Engineering student passionate about building AI products, modern web
-          applications, and creative digital experiences.
+          Software Engineering student passionate about building AI products,
+          modern web applications, and creative digital experiences.
         </motion.p>
 
         <motion.div
@@ -103,14 +111,26 @@ export function Hero() {
             Contact Me
           </a>
           <a
-  href="/resume/Doc1.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors"
->
-  <Download className="h-4 w-4" />
-  Resume
-</a>
+            href="https://github.com/mayank-sharma-x-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-primary to-violet px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_0_30px_oklch(0.78_0.2_235/0.4)] transition-all hover:shadow-[0_0_50px_oklch(0.78_0.2_235/0.7)]"
+          >
+            <Github className="h-4 w-4" />
+            GitHub
+          </a>
+          <div className="inline-flex items-center rounded-xl border border-border bg-card/50 px-6 py-3 text-sm font-semibold text-muted-foreground">
+            Other repositories are unavailable here — client-based and private.
+          </div>
+          <a
+            href="/resume/Doc1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors"
+          >
+            <Download className="h-4 w-4" />
+            Resume
+          </a>
         </motion.div>
 
         <motion.div

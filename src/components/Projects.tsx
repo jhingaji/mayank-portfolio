@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { ArrowUpRight, Gamepad2, MessagesSquare, CalendarCheck, Zap } from "lucide-react";
+import {
+  ArrowUpRight,
+  Gamepad2,
+  MessagesSquare,
+  CalendarCheck,
+  Zap,
+} from "lucide-react";
 
 const hunterFeatures = [
   "Lucy AI Campus & Growth Advisor",
@@ -64,11 +70,18 @@ export function Projects() {
               <span className="text-neon">HunterOS</span>
             </h3>
             <p className="mt-4 max-w-lg text-base text-muted-foreground md:text-lg">
-              An AI-powered personal growth platform inspired by RPG progression systems.
-              Built to turn your life into a quest log.
+              An AI-powered personal growth platform inspired by RPG progression
+              systems. Built to turn your life into a quest log.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {["React.js", "Python", "MongoDB", "REST APIs", "OpenAI", "Gemini"].map((t) => (
+              {[
+                "React.js",
+                "Python",
+                "MongoDB",
+                "REST APIs",
+                "OpenAI",
+                "Gemini",
+              ].map((t) => (
                 <span
                   key={t}
                   className="rounded-lg border border-border bg-card/60 px-3 py-1 text-xs text-foreground/90"
@@ -79,7 +92,7 @@ export function Projects() {
             </div>
             <div className="mt-8">
               <a
-                href="https://leveling-chronicle.lovable.app/dashboard"
+                href="https://hunter-os-v.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[0_0_30px_oklch(0.78_0.2_235/0.4)] transition-all hover:shadow-[0_0_50px_oklch(0.78_0.2_235/0.7)]"
@@ -93,29 +106,29 @@ export function Projects() {
           <div className="space-y-3">
             <div className="grid grid-cols-3 gap-3">
               {[
-  "/images/login-page.png",
-  "/images/study-zone.png",
-  "/images/vitals-health.png",
-].map((image, i) => (
-  <div
-    key={i}
-    className="aspect-square rounded-xl border border-border overflow-hidden"
-  >
-    <img
-      src={image}
-      alt={`HunterOS ${i + 1}`}
-      className="w-full h-full object-cover"
-    />
-  </div>
-))}
+                "/images/login-page.png",
+                "/images/study-zone.png",
+                "/images/vitals-health.png",
+              ].map((image, i) => (
+                <div
+                  key={i}
+                  className="aspect-square rounded-xl border border-border overflow-hidden"
+                >
+                  <img
+                    src={image}
+                    alt={`HunterOS ${i + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
             <div className="aspect-[16/9] rounded-xl border border-border overflow-hidden">
-  <img
-    src="/images/dashboard.png"
-    alt="HunterOS Preview"
-    className="w-full h-full object-cover"
-  />
-</div>
+              <img
+                src="/images/dashboard.png"
+                alt="HunterOS Preview"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="grid grid-cols-2 gap-2">
               {hunterFeatures.map((f) => (
                 <div
@@ -149,7 +162,9 @@ export function Projects() {
               <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
             </div>
             <h4 className="font-display text-lg font-semibold">{p.title}</h4>
-            <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.desc}</p>
+            <p className="mt-2 flex-1 text-sm text-muted-foreground">
+              {p.desc}
+            </p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {p.tags.map((t) => (
                 <span
